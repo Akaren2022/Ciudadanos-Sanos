@@ -1,4 +1,7 @@
+using CiudadanosSanos.Data;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -12,6 +15,10 @@ namespace CiudadanosSanos
 
 			// Add services to the container.
 			builder.Services.AddRazorPages();
+
+			builder.Services.AddDbContext<CiudadanosSanosContext>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("CiudadanosSanosDB"))
+			);
 
 			var app = builder.Build();
 
