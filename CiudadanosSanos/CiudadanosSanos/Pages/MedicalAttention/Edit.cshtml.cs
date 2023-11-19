@@ -40,7 +40,7 @@ namespace CiudadanosSanos.Pages.MedicalAttention
 			}
 			catch (DbUpdateConcurrencyException)
 			{
-				if (!ServiceExists(MedicAttention.MedicalAttention.Id))
+				if (!MedicAttentionExists(MedicAttention.MedicalAttention.Id))
 				{
 					return NotFound();
 				}
@@ -51,7 +51,7 @@ namespace CiudadanosSanos.Pages.MedicalAttention
 			}
 			return RedirectToPage("./Index");
 		}
-		private bool ServiceExists(int id)
+		private bool MedicAttentionExists(int id)
 		{
 			return (_context.MedicalAttentions?.Any(e => e.Id == id)).GetValueOrDefault();
 		}
