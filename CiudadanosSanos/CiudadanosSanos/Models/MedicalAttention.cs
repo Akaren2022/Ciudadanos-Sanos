@@ -16,6 +16,6 @@ namespace CiudadanosSanos.Models
 		public string MedicName { get; set; }
 
 		public int PatientId { get; set; }
-		public Patient Cliente { get; set; }
+		public Patient Patient { get; set; }
 	}
 }

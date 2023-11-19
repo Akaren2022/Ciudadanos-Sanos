@@ -5,9 +5,10 @@ namespace CiudadanosSanos.Data
 {
 	public class CiudadanosSanosContext: DbContext
 	{
-		public CiudadanosSanosContext(DbContextOptions options) : base(options) { 
-		
-		}
+		//public CiudadanosSanosContext(DbContextOptions options) : base(options)
+		//{
+
+		//}
 		public DbSet<User> Users { get; set; }
 		public DbSet<Patient> Patients { get; set; }
 		public DbSet<MedicalAttention> MedicalAttentions { get; set; }
