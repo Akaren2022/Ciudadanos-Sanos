@@ -1,0 +1,45 @@
+﻿@page
+@model CiudadanosSanos.Pages.MedicalAttention.CreateModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Medical Attention</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div class="form-group">
+				<label asp-for="MedicAttention.MedicalAttention.Fecha" class="form-label"></label>
+				<input asp-for="MedicAttention.MedicalAttention.Fecha" class="form-control" />
+				<span asp-validation-for="MedicAttention.MedicalAttention.Fecha" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="MedicAttention.MedicalAttention.MedicName" class="form-label"></label>
+				<input asp-for="MedicAttention.MedicalAttention.MedicName" class="form-control" placeholder="Medic Name" />
+				<span asp-validation-for="MedicAttention.MedicalAttention.MedicName" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<label asp-for="MedicAttention.MedicalAttention.Patient" class="form-label"></label>
+				<select asp-for="MedicAttention.MedicalAttention.PatientId"
+						asp-items="@(new SelectList(Model.MedicAttention.PatientList, "Id", "Name"))"
+						class="form-control">
+				</select>
+				<span asp-validation-for="MedicAttention.MedicalAttention.Patient" class="text-danger"></span>
+			</div>
+			<div />
+			<div class="form-group mt-3">
+				<input type="submit" value="Create" class="btn btn-success" />
+				<a asp-page="Index" class="btn btn-primary">Back</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
