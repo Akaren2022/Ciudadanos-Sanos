@@ -1,5 +1,6 @@
 using CiudadanosSanos.Data;
 using CiudadanosSanos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace CiudadanosSanos.Pages.Patient
 {
-    public class IndexModel : PageModel
+	[Authorize]
+	public class IndexModel : PageModel
     {
         private readonly CiudadanosSanosContext _context;
 
