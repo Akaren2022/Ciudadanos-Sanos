@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EuXnF6y9c48sHeCWjRn9yWLwAoAVm95va5ltd36bkzsKTZUxP/XdRiH81TImMg/C6WAxBbBCIJlyJC6T/9H+hA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Zarkprogame\\Documents\\Ciudadanos Sanos\\CiudadanosSanos\\CiudadanosSanos\\CiudadanosSanos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zarkprogame\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+  ],
+  "logs": []
+}
